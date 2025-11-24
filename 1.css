@@ -1,0 +1,226 @@
+/* GENERAL */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #f5f5f5;
+    color: #222;
+}
+
+/* NAV */
+header {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(10px);
+    z-index: 1000;
+}
+
+nav {
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.logo {
+    font-size: 26px;
+    font-weight: 700;
+    color: #0057ff;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    font-weight: 600;
+    color: #222;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: #0057ff;
+}
+
+/* HERO */
+.hero {
+    height: 100vh;
+    background: url("https://images.unsplash.com/photo-1521791136064-7986c2920216") center/cover no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    padding: 20px;
+}
+
+.hero-content h1 {
+    font-size: 70px;
+    text-shadow: 2px 2px 5px black;
+}
+
+.hero-content p {
+    font-size: 22px;
+    margin: 10px 0 20px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 12px 25px;
+    background: #0057ff;
+    color: #fff;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: #003fcc;
+}
+
+/* SERVICIOS */
+.servicios {
+    max-width: 1200px;
+    margin: auto;
+    padding: 100px 20px;
+    text-align: center;
+}
+
+.title {
+    font-size: 40px;
+    margin-bottom: 40px;
+}
+
+.cards-container {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.card {
+    width: 320px;
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+}
+
+.card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.card h3 {
+    padding: 15px;
+    font-size: 20px;
+}
+
+.card p {
+    padding: 0 15px 20px;
+}
+
+/* NOSOTROS */
+.nosotros {
+    max-width: 1200px;
+    margin: auto;
+    padding: 80px 20px;
+    display: flex;
+    gap: 40px;
+    align-items: center;
+}
+
+.nosotros-text {
+    flex: 1;
+}
+
+.nosotros-img {
+    width: 40%;
+    border-radius: 12px;
+}
+
+/* CONTACTO */
+.contacto {
+    text-align: center;
+    padding: 80px 20px;
+    background: white;
+}
+
+.form {
+    max-width: 600px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.form input,
+.form textarea {
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 16px;
+}
+
+.form button {
+    cursor: pointer;
+}
+
+/* FOOTER */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #222;
+    color: white;
+}
+
+/* ANIMACIONES */
+.fade-in {
+    animation: fade 1.5s ease forwards;
+    opacity: 0;
+}
+
+.slide-up {
+    animation: slideUp 1s ease forwards;
+    opacity: 0;
+}
+
+.zoom-in {
+    animation: zoomIn 1.2s ease forwards;
+    opacity: 0;
+}
+
+@keyframes fade {
+    to { opacity: 1; }
+}
+
+@keyframes slideUp {
+    from { opacity: 0; transform: translateY(40px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes zoomIn {
+    from { transform: scale(0.8); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+}
